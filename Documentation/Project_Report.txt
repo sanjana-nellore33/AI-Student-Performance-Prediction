@@ -1,0 +1,146 @@
+# AI-POWERED STUDENT PERFORMANCE PREDICTION
+
+## 1. Abstract
+
+The AI-Powered Student Performance Prediction system is a machine learning application designed to estimate students' final academic grades based on their academic, personal, and social information. The project uses the TabPFN machine learning model and the UCI Student Performance dataset. A user-friendly web application is developed using Python and Streamlit. It supports individual predictions, bulk predictions, data visualization, input validation, and prediction history.
+
+## 2. Introduction
+
+Student academic performance is influenced by several factors, including study time, previous grades, family background, and school-related activities. Predicting student performance can help identify students who may need additional academic support.
+
+This project uses machine learning to estimate students' final grades based on selected input features.
+
+## 3. Problem Statement
+
+It can be difficult to manually analyze multiple factors that influence student academic performance. This project addresses the problem by developing a machine learning application that estimates students' final grades using available student information.
+
+## 4. Objectives
+
+- To analyze student academic performance data.
+- To develop a machine learning model using TabPFN.
+- To predict students' final grades.
+- To provide individual and bulk prediction facilities.
+- To visualize student performance through charts.
+- To validate input data and maintain prediction history.
+
+## 5. Dataset Description
+
+**Dataset:** UCI Student Performance Dataset
+
+**Source:** https://archive.ics.uci.edu/dataset/320/student+performance
+
+Dataset details:
+
+- Total records: 395 students
+- Total columns: 33
+- Input features used: 31
+- Target variable: G3 (Final Grade)
+- Missing values: 0
+- Duplicate records: 0
+
+The dataset contains academic, personal, family, and social information about students.
+
+The G2 column was excluded from the input features, and G3 was used as the prediction target.
+
+## 6. Technologies Used
+
+- Python
+- Visual Studio Code
+- Streamlit
+- Pandas
+- NumPy
+- Scikit-learn
+- TabPFN
+- Matplotlib
+- Seaborn
+
+## 7. Methodology
+
+The project was developed using the following steps:
+
+1. Dataset collection and loading.
+2. Data inspection and preprocessing.
+3. Exploratory data analysis.
+4. Selection of input features and target variable.
+5. Splitting the dataset into training and testing sets.
+6. Training the TabPFN regression model.
+7. Evaluating model performance.
+8. Saving and loading the trained model.
+9. Developing the Streamlit web application.
+10. Testing predictions, validation, and prediction history.
+
+The dataset was divided into 80% training data and 20% testing data using random_state=42.
+
+## 8. Machine Learning Model
+
+The project uses TabPFNRegressor, a machine learning model based on TabPFN.
+
+The model learns patterns from the student dataset and predicts the estimated final grade (G3).
+
+The trained model was saved and loaded into the Streamlit application for making predictions.
+
+## 9. Model Evaluation
+
+The model was evaluated using three performance metrics.
+
+| Metric | Result |
+|---|---:|
+| Mean Absolute Error (MAE) | 1.52 |
+| Root Mean Squared Error (RMSE) | 2.10 |
+| R² Score | 0.78 |
+
+The R² score of 0.78 indicates that the model explains approximately 78% of the variation in final grades on the test dataset.
+
+## 10. Application Features
+
+1. Home Page – Displays project information and model performance.
+2. Individual Prediction – Predicts the final grade of one student.
+3. Bulk Prediction – Predicts grades for multiple students using CSV or Excel files.
+4. Dashboard – Displays student performance statistics and charts.
+5. Input Validation – Detects missing values, invalid numerical values, and invalid categories.
+6. Prediction History – Stores previous predictions in a CSV file.
+7. Download Results – Allows users to download prediction results.
+
+## 11. Testing
+
+The application was tested using different input conditions.
+
+- Individual student prediction was tested successfully.
+- Bulk prediction using a CSV file was tested.
+- Prediction results were downloaded.
+- Missing values were detected.
+- Invalid numerical values were detected.
+- Invalid categorical values were detected.
+- Prediction history was checked after restarting the application.
+
+## 12. Results
+
+The application successfully predicts estimated student final grades using the trained TabPFN model.
+
+It provides interactive visualizations, individual and bulk predictions, input validation, and permanent local prediction history through CSV storage.
+
+## 13. Conclusion
+
+The AI-Powered Student Performance Prediction project successfully demonstrates the use of machine learning to estimate students' final academic grades. The TabPFN model achieved an R² score of 0.78 on the test dataset. The Streamlit application makes predictions and data analysis easier through a simple user interface.
+
+## 14. Future Enhancements
+
+- Use larger and more diverse student datasets.
+- Improve prediction accuracy through further experimentation.
+- Add student progress tracking over time.
+- Provide personalized academic improvement suggestions.
+- Deploy the application online for wider access.
+
+## 15. References
+
+1. UCI Machine Learning Repository – Student Performance Dataset.
+   https://archive.ics.uci.edu/dataset/320/student+performance
+
+2. TabPFN Documentation.
+   https://docs.priorlabs.ai/
+
+3. Streamlit Documentation.
+   https://docs.streamlit.io/
+
+4. Scikit-learn Documentation.
+   https://scikit-learn.org/
