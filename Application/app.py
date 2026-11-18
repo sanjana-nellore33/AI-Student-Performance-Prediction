@@ -1,5 +1,6 @@
 
 import io
+import os
 import streamlit as st
 import pandas as pd
 from pathlib import Path
@@ -19,6 +20,15 @@ st.set_page_config(
     page_icon="🎓",
     layout="wide"
 )
+
+# Load TabPFN authentication token securely from Streamlit Cloud Secrets.
+# Locally, TABPFN_TOKEN can continue to be supplied through the environment.
+try:
+    if "TABPFN_TOKEN" in st.secrets:
+        os.environ["TABPFN_TOKEN"] = st.secrets["TABPFN_TOKEN"]
+except (FileNotFoundError, KeyError):
+    pass
+
 
 # Load dataset
 df = pd.read_csv(dataset_path, sep=";")
